@@ -1,6 +1,11 @@
 **AUTH FLOW DATABASE**
 ```mermaid
 erDiagram
+users ||--|| user_role: connect
+user_role ||--|| roles: connect
+users }|--|| sessions: has
+
+
 users {
     int id
     string name
